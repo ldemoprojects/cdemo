@@ -1,0 +1,9 @@
+{
+  "name": "cdemo",
+  "version": "1.0.0",
+  "description": "Single Page App for Displaying Contacts",
+  "main": "index.js",
+  "repository": "https://github.com/ldemoprojects/cdemo.git",
+  "author": "Alex M",
+  "license": "MIT"
+}
