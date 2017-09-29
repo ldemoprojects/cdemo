@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header';
 // import Content from './content';
-// import Footer from './footer';
+import Footer from './footer';
 import './main.scss';
 
 export default class Main extends React.Component {
@@ -14,6 +14,7 @@ export default class Main extends React.Component {
     return (
      <div className="main-container">
         <Header {...this.props}/>
+        <Footer />
       </div>
       );
   }

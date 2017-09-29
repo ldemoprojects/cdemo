@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './header.scss';
+import './footer.scss';
 
-export default class Header extends React.Component {
+export default class Footer extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,13 +14,13 @@ export default class Header extends React.Component {
 
   render() {
     return (
-     <div className="header-container">
-        Welcome, {this.props.contacts.name}
+     <div className="footer-container">
+        Home | About | Contact Us 
       </div>
     );
   }
 }
 
-Header.propTypes = {
+Footer.propTypes = {
   name: PropTypes.string
 };
