@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './header.scss';
+import './content.scss';
 
-export default class Header extends React.Component {
+export default class Content extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,13 +14,13 @@ export default class Header extends React.Component {
 
   render() {
     return (
-     <div className="header-container">
-        <h3>Welcome, {this.props.name}</h3>
+     <div className="content-container">
+        <h6>Contacts</h6>
       </div>
     );
   }
 }
 
-Header.propTypes = {
+Content.propTypes = {
   name: PropTypes.string
 };
