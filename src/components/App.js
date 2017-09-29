@@ -17,16 +17,15 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
-    Store.addChangeListener(Constants.EXPAND_CONTACT, () => this.onExpandContact);
+    Store.addChangeListener(Constants.EXPAND_CONTACT, this.onExpandContact.bind(this));
   }
 
   shouldComponentUpdate(nextState){
     if(nextState.expanded != this.state.expanded) return true;
-
+    return false;
   }
 
   onExpandContact(contact){
-    console.log("on expand contact");
     this.setState({
       expanded: Store.getExpanded()
     });

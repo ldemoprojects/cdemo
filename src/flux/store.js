@@ -72,7 +72,6 @@ class Store extends EventEmitter {
   }
 
   getExpanded(){
-    console.log(expanded);
     return expanded;
   }
 
