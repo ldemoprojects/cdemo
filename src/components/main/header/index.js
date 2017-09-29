@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './header.scss';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -14,8 +15,8 @@ export default class Header extends React.Component {
 
   render() {
     return (
-     <div>
-        Welcome, {this.props.contacts.name}!
+     <div className="header-container">
+        <span>Welcome, {this.props.contacts.name}! </span>
       </div>
     );
   }

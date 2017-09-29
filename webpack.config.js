@@ -13,7 +13,7 @@ const config = {
       {test: /\.js$/,   use: 'babel-loader', exclude: /node_modules/},
       {test: /\.jsx$/,  use: 'babel-loader', exclude: /node_modules/},
       {test: /\.json$/, use: 'json-loader'},
-      {test: /\.scss$/, use: 'style!css!postcss!sass'}
+      {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']}
     ]
   },
   plugins: [

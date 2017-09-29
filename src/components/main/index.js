@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './header';
 // import Content from './content';
 // import Footer from './footer';
+import './main.scss';
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ export default class Main extends React.Component {
 
   render() {
     return (
-     <div>
+     <div className="main-container">
         <Header {...this.props}/>
       </div>
       );
