@@ -9,6 +9,7 @@ export default class ContactList extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
+    console.log(nextProps.expanded);
     if(nextProps.contacts != this.props.contacts) return true;
     if(nextProps.expanded != this.props.expanded) return true;
     return false;
@@ -26,17 +27,32 @@ export default class ContactList extends React.Component {
   displayExpanded(contact) {
     // const name, email, phoneNumber, address, company, birthday, image;
     return (<li key={contact.name+contact.id}>
-      {contact.email}
-    </li>)
+      <div className="contact-info-container">
+        <p>{contact.name}</p>
+        <p>{contact.email}</p>
+        <p>{contact.phoneNumber}</p>
+        <p>{contact.address}</p>
+        <p>{contact.company}</p>
+        <p>{contact.birthday}</p>
+      </div>
+      <div className="more" onClick={() => this.onClickLess()}>
+        Less...
+      </div>
+    </li>);
   }
 
   onClickMore(id){
     //call expand contact action to update store state
     Actions.expandContact(id);
-    console.log(id);
+  }
+
+  onClickLess(id){
+    Actions.expandContact(null);
   }
 
   render() {
+    debugger;
+    console.log(this.props.expanded);
     return (
      <div className="contact-list-container">
        <ul>

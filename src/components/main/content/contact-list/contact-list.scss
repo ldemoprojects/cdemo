@@ -30,6 +30,11 @@
       li:hover {
         background-color: #C8C8C8;
       }
+      .contact-info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
 }

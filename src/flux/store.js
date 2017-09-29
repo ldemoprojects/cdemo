@@ -76,7 +76,7 @@ class Store extends EventEmitter {
   }
 
   setExpanded(index) {
-    expanded = contacts.people[index];
+    expanded = index;
   }
 
   emitChange(event) {
