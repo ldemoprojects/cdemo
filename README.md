@@ -6,10 +6,10 @@ This is a single page application written in React. It displays a list of contac
 ![Overview](/src/flux/data/img/overview.png?raw=true)
 
 ## Architecture 
-The architecture of this app involves a parent container, with a Header, Footer, and Content. Communication between components is done using flux. The main dispatch event is EXPAND_CONTACT, which is triggered from the ContactList component whenever a contact is clicked. This updates the store state to match the id of the expanded component. 
+The architecture of this app involves a parent container, with a Header, Footer, and Content. Communication between components is done using flux. The main dispatch event is `EXPAND_CONTACT`, which is triggered from the ContactList component whenever a contact is clicked. This updates the store state to match the id of the expanded component. 
 
 ## Data 
-The data consists of a main contacts object that includes the user's name and id. Inside, there is a `people` array that contains the user's contacts. 
+The data consists of a main contacts object that includes the user's general information. Inside, there is a `people` array that contains the user's contacts. 
 
   ```  
     name: 'Alex',
