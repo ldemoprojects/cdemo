@@ -5,7 +5,8 @@ import Constants from '../flux/constants'
 
 function getContactsState() {
   return {
-    contacts: Store.getContacts()
+    contacts: Store.getContacts(),
+    expanded: Store.getExpanded()
   };
 }
 
@@ -16,12 +17,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
-    Store.addChangeListener(Constants.LOAD_DATA, this.onLoadData);
     Store.addChangeListener(Constants.EXPAND_CONTACT, this.onExpandContact);
-  }
-
-  onLoadData(){
-    console.log("on load data");
   }
 
   onExpandContact(){
@@ -31,7 +27,7 @@ export default class App extends React.Component {
   render() {
     return (
      <div>
-        <Main {...this.props} />
+        <Main contacts={this.state.contacts} expanded={this.state.expanded}/>
       </div>
       );
   }
