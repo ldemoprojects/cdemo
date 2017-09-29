@@ -3,7 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 200px;
-  background-color: #FFA500;
+  // background-color: #FFA500;
+  background: #ff9900;
+  // background: -webkit-linear-gradient(left top, #668cff,  #0066cc);
+  // background: -o-linear-gradient(bottom right, #668cff,  #0066cc);
+  // background: -moz-linear-gradient(bottom right, #668cff,  #0066cc);
+  background: linear-gradient(to bottom right, #ff9900,  #ff6600);
   color: 	#F5F5F5;
   font-weight: 100;
 }

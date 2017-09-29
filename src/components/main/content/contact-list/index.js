@@ -9,7 +9,7 @@ export default class ContactList extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    console.log(nextProps.expanded);
+    console.log("nextprops: ", nextProps.expanded);
     if(nextProps.contacts != this.props.contacts) return true;
     if(nextProps.expanded != this.props.expanded) return true;
     return false;
@@ -18,7 +18,7 @@ export default class ContactList extends React.Component {
   displayDefault(name, id) { // default display for contact
     return (<li key={name+id}>
       {name}
-      <div className="more" onClick={() => this.onClickMore(id)}>
+      <div className="btn more" onClick={() => this.onClickMore(id)}>
         More...
       </div>
     </li>);
@@ -26,22 +26,24 @@ export default class ContactList extends React.Component {
 
   displayExpanded(contact) {
     // const name, email, phoneNumber, address, company, birthday, image;
-    return (<li key={contact.name+contact.id}>
+    return (<li className="expanded" key={contact.name+contact.id}>
+      <span className="title">{contact.name}</span>
       <div className="contact-info-container">
-        <p>{contact.name}</p>
-        <p>{contact.email}</p>
-        <p>{contact.phoneNumber}</p>
-        <p>{contact.address}</p>
-        <p>{contact.company}</p>
-        <p>{contact.birthday}</p>
+        <img src={require('../../../../flux/data/img/avatar.png')} />
+        <p>Phone Number: {contact.phoneNumber}</p>
+        <p>Address: {contact.address}</p>
+        <p>Email: {contact.email}</p>
+        <p>Company: {contact.company}</p>
+        <p>Birthday: {contact.birthday}</p>
       </div>
-      <div className="more" onClick={() => this.onClickLess()}>
+      <div className="btn less" onClick={() => this.onClickLess()}>
         Less...
       </div>
     </li>);
   }
 
   onClickMore(id){
+    console.log("click more");
     //call expand contact action to update store state
     Actions.expandContact(id);
   }
@@ -67,5 +69,6 @@ export default class ContactList extends React.Component {
 }
 
 ContactList.propTypes = {
-  name: PropTypes.string
+  contacts: PropTypes.object,
+  expanded: PropTypes.number
 };
