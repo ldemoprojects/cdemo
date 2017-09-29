@@ -1,0 +1,35 @@
+.contact-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+    font-size: 20px;
+    width: 100%;
+    padding: 0 200px;
+    li {
+      padding: 15px;
+      padding-right: 50px;
+      text-decoration: none;
+      border: 1px solid #E8E8E8;
+      border-radius: 4px;
+      margin: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .more {
+        border-radius: 4px;
+        color: #005c99;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-weight: 100;
+      }
+      li:hover {
+        background-color: #C8C8C8;
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
 .content-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
+  // height: 100vh;
   background-color: #F5F5F5;
   color: 	#383838;
+  h6 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 20px;
+  }
 }
