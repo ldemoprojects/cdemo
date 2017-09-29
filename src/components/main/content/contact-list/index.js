@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Actions from '../../../../flux/actions';
 import './contact-list.scss';
 
 export default class ContactList extends React.Component {
@@ -16,7 +17,7 @@ export default class ContactList extends React.Component {
   displayDefault(name, id) { // default display for contact
     return (<li key={name+id}>
       {name}
-      <div className="more" onClick={this.onClickMore(id)}>
+      <div className="more" onClick={() => this.onClickMore(id)}>
         More...
       </div>
     </li>);
@@ -31,6 +32,7 @@ export default class ContactList extends React.Component {
 
   onClickMore(id){
     //call expand contact action to update store state
+    Actions.expandContact(id);
     console.log(id);
   }
 

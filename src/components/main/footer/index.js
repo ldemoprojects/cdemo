@@ -7,20 +7,15 @@ export default class Footer extends React.Component {
     super(props);
   }
 
-  shouldComponentUpdate(nextProps) {
-    if(nextProps.name != this.props.name) return true;
+  shouldComponentUpdate(nextProps, nextState) {
     return false;
   }
 
   render() {
     return (
      <div className="footer-container">
-        Home | About | Contact Us 
+        Home | About | Contact Us
       </div>
     );
   }
 }
-
-Footer.propTypes = {
-  name: PropTypes.string
-};

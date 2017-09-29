@@ -7,7 +7,7 @@ let contacts = {
   image: './img/avatar.png',
   people: [
     {
-      id: 1,
+      id: 0,
       name: 'John Wittaker',
       email: 'jwittaker@email.com',
       phoneNumber: '123-345-4567',
@@ -17,7 +17,7 @@ let contacts = {
       image: './img/john.png'
     },
     {
-      id: 2,
+      id: 1,
       name: 'Alice Lane',
       email: 'alane@email.com',
       phoneNumber: '345-466-4567',
@@ -27,7 +27,7 @@ let contacts = {
       image: './img/alice.png'
     },
     {
-      id: 3,
+      id: 2,
       name: 'Joey King',
       email: 'jking@email.com',
       phoneNumber: '452-345-4567',
@@ -37,7 +37,7 @@ let contacts = {
       image: './img/joey.png'
     },
     {
-      id: 4,
+      id: 3,
       name: 'Emma Harris',
       email: 'eharris@email.com',
       phoneNumber: '905-345-4567',
@@ -47,7 +47,7 @@ let contacts = {
       image: './img/emma.png'
     },
     {
-      id: 5,
+      id: 4,
       name: 'Steve Owens',
       email: 'sowens@email.com',
       phoneNumber: '876-244-4567',
@@ -72,6 +72,7 @@ class Store extends EventEmitter {
   }
 
   getExpanded(){
+    console.log(expanded);
     return expanded;
   }
 
@@ -94,11 +95,11 @@ class Store extends EventEmitter {
   dispatcherCallback(action) {
       switch (action.actionType) {
           case Constants.EXPAND_CONTACT:
-              this.setExpanded(action.value);
+              this.setExpanded(action.data);
               break;
       }
 
-      this.emitChange('STORE_' + action.actionType);
+      this.emitChange(Constants.EXPAND_CONTACT);
 
       return true;
   }

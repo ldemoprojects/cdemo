@@ -9,7 +9,7 @@ export default class Content extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    if(nextProps.name != this.props.name) return true;
+    if(nextProps.expanded != this.props.expanded) return true;
     return false;
   }
 
@@ -24,5 +24,5 @@ export default class Content extends React.Component {
 }
 
 Content.propTypes = {
-  name: PropTypes.string
+  expanded: PropTypes.object
 };
