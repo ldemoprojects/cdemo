@@ -24,7 +24,8 @@ The data consists of a main contacts object that includes the user's name and id
         company: 'XYZ Corp',
         birthday: '12-09-1990',
         image: './img/john.png'
-      }...  
+      }
+    ]
  ```
 
 ## Future Improvements
