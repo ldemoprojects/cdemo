@@ -9,7 +9,7 @@ export default class ContactList extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    console.log("nextprops: ", nextProps.expanded);
+    debugger;
     if(nextProps.contacts != this.props.contacts) return true;
     if(nextProps.expanded != this.props.expanded) return true;
     return false;
@@ -43,7 +43,6 @@ export default class ContactList extends React.Component {
   }
 
   onClickMore(id){
-    console.log("click more");
     //call expand contact action to update store state
     Actions.expandContact(id);
   }
@@ -54,7 +53,6 @@ export default class ContactList extends React.Component {
 
   render() {
     debugger;
-    console.log(this.props.expanded);
     return (
      <div className="contact-list-container">
        <ul>

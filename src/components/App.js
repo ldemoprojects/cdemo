@@ -1,7 +1,9 @@
 import React from 'react';
 import Main from './main';
 import Store from '../flux/store';
+import Actions from '../flux/actions';
 import Constants from '../flux/constants'
+import _ from 'lodash';
 
 function getContactsState() {
   return {
@@ -20,12 +22,7 @@ export default class App extends React.Component {
     Store.addChangeListener(Constants.EXPAND_CONTACT, this.onExpandContact.bind(this));
   }
 
-  shouldComponentUpdate(nextState){
-    if(nextState.expanded != this.state.expanded) return true;
-    return false;
-  }
-
-  onExpandContact(contact){
+  onExpandContact(){
     this.setState({
       expanded: Store.getExpanded()
     });
