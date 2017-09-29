@@ -18,7 +18,7 @@ class Actions {
 
   receiveData(contacts) {
     AppDispatcher.dispatch({
-      actionType: Constants.RECEIVE_DATA,
+      actionType: Constants.LOAD_DATA,
       data: contacts
     });
   }

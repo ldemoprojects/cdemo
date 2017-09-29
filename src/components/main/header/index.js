@@ -15,7 +15,7 @@ export default class Header extends React.Component {
   render() {
     return (
      <div>
-        JSON.parse(localStorage.getItem('contacts'));
+        Welcome, (this.props.name)!
       </div>
     );
   }

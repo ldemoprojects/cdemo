@@ -16,12 +16,16 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
-    Store.addChangeListener(Constants.RECEIVE_DATA, this.getContacts());
-    Store.addChangeListener(Constants.EXPAND_CONTACT, this.selectContact());
+    Store.addChangeListener(Constants.LOAD_DATA, this.onLoadData);
+    Store.addChangeListener(Constants.EXPAND_CONTACT, this.onExpandContact);
   }
 
-  getContacts(){
-    console.log("test");
+  onLoadData(){
+    console.log("on load data");
+  }
+
+  onExpandContact(){
+    console.log("on expand contact");
   }
 
   render() {
