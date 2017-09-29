@@ -6,12 +6,13 @@ import Header from './header';
 export default class Main extends React.Component {
   constructor(props) {
     super(props);
+    console.log("from main: ", this.props);
   }
 
   render() {
     return (
      <div>
-        <Header />
+        <Header {...this.props}/>
       </div>
       );
   }

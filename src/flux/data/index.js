@@ -1,15 +1,16 @@
-module.exports = {
+
+export const Contacts = {
   init: function() {
     localStorage.clear();
     localStorage.setItem('contacts', JSON.stringify([
       {
         name: 'Alex',
         image: './img/avatar.png',
-        contacts: [
+        people: [
           {
             id: 1,
             name: 'John Wittaker',
-            email: 'jwittaker@email.com'
+            email: 'jwittaker@email.com',
             phoneNumber: '123-345-4567',
             address: '124 Willow Lane',
             company: 'XYZ Corp',
@@ -60,5 +61,6 @@ module.exports = {
       }
     ]));
   }
-
 };
+
+export default Contacts;

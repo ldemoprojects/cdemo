@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.js';
-import ContactData from './flux/data/contacts.js';
-import ContactUtils from './flux/utils';
+import Contacts from './flux/data';
+import Utils from './flux/utils';
+import Store from './flux/store';
 
-ContactData.init(); // load contact data into localStorage
-ContactUtils.getContactData();
+// Contacts.init(); // load contact data into localStorage
+// Utils.getContactData();
 
 ReactDOM.render(<App />, document.getElementById('root'));

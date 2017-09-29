@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Header extends React.Component {
+export default class ContactList extends React.Component {
   constructor(props) {
     super(props);
-    console.log("entering contact list");
+    console.log("entering");
   }
 
   shouldComponentUpdate(nextProps) {
@@ -15,9 +15,9 @@ export default class Header extends React.Component {
   render() {
     return (
      <div>
-        JSON.parse(localStorage.getItem('contacts'));
+        Welcome, Alex
       </div>
-    );
+      );
   }
 }
 

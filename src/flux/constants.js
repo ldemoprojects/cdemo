@@ -1,8 +1,10 @@
-var keyMirror = require('react/lib/keyMirror');
+var keyMirror = require('keyMirror');
 
-module.exports = keyMirror({
-  ADD_CONTACT: null,       // Adds contact to list
-  REMOVE_CONTACT: null,    // Removes contact from list
-  EXPAND_CONTACT: null,   // Expands contact from list
-  RECEIVE_DATA: null    // Loads our mock data
+const Constants = keyMirror({
+  ADD_CONTACT: null,
+  REMOVE_CONTACT: null,
+  EXPAND_CONTACT: null,
+  RECEIVE_DATA: null
 });
+
+module.exports = Constants;

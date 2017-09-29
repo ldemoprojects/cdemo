@@ -1,39 +1,34 @@
 import AppDispatcher from './dispatcher';
 import Constants from './constants';
 
-const Actions = {
+class Actions {
+  // addContact(sku, update) {
+  //   AppDispatcher.dispatch({
+  //     actionType: Constants.ADD_CONTACT,
+  //     value: data
+  //   })
+  // }
+  //
+  // removeContact(sku) {
+  //   AppDispatcher.dispatch({
+  //     actionType: Constants.REMOVE_CONTACT,
+  //     id: id
+  //   })
+  // }
 
-  // Add item to cart
-  addToCart: function(sku, update) {
-    AppDispatcher.handleAction({
-      actionType: FluxCartConstants.ADD_CONTACT,
-      sku: sku,
-      update: update
-    })
-  },
-
-  // Remove item from cart
-  removeFromCart: function(sku) {
-    AppDispatcher.handleAction({
-      actionType: FluxCartConstants.REMOVE_CONTACT,
-      sku: sku
-    })
-  },
-
-  receiveContacts: function(data) {
-    AppDispatcher.handleAction({
+  receiveData(contacts) {
+    AppDispatcher.dispatch({
       actionType: Constants.RECEIVE_DATA,
-      data: data
-    })
-  },
-
-  expandContact: function(index) {
-    AppDispatcher.handleAction({
-      actionType: FluxCartConstants.EXPAND_CONTACT,
-      data: index
-    })
+      data: contacts
+    });
   }
 
-};
+  expandContact(index) {
+    AppDispatcher.dispatch({
+      actionType: Constants.EXPAND_CONTACT,
+      data: index
+    });
+  }
+}
 
-module.exports = FluxCartActions;
+export default new Actions();
