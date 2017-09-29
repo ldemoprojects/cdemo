@@ -11,7 +11,7 @@ The architecture of this app involves a parent container, with a Header, Footer,
 ## Data 
 The data consists of a main contacts object that includes the user's name and id. Inside, there is a `people` array that contains the user's contacts. 
 
-  ```json  
+  ```  
     name: 'Alex',
     image: './img/avatar.png',
     people: [
