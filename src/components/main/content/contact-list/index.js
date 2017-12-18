@@ -9,7 +9,6 @@ export default class ContactList extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    debugger;
     if(nextProps.contacts != this.props.contacts) return true;
     if(nextProps.expanded != this.props.expanded) return true;
     return false;
@@ -52,7 +51,6 @@ export default class ContactList extends React.Component {
   }
 
   render() {
-    debugger;
     return (
      <div className="contact-list-container">
        <ul>
