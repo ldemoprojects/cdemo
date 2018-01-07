@@ -27,8 +27,3 @@ The data consists of a main contacts object that includes the user's general inf
       }
     ]
  ```
-
-## Future Improvements
-Add functionality for deleting/adding/editing contacts. Implement internationalization. Set up a testing framework. Implement an API for storing and retrieving user information from a remote server. 
-
-
